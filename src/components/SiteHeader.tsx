@@ -60,6 +60,15 @@ const SiteHeader = () => {
                 Team
               </Link>
             </li>
+            <li>
+              <Link 
+                to="/gallery" 
+                className={`hover:text-temple-gold transition-colors ${location.pathname === '/gallery' ? 'font-semibold text-temple-gold' : ''}`}
+              >
+                Gallery
+              </Link>
+            </li>
+            
             
             
           </ul>

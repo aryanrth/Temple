@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 import Teams from "./pages/Teams";
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/team" element={<Teams />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

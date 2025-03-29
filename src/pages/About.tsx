@@ -16,13 +16,13 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-10 mb-10">
             <div>
               <p className="text-lg mb-6">
-                Founded in 1978, our temple has been a spiritual sanctuary for the community for over four decades. We are dedicated to preserving our cultural heritage while providing a peaceful space for worship and meditation.
+              मंदिर की स्थापना 31 मई 2011 को इसके संस्थापक रामदथ राठौर और उनकी पत्नी सांति देवी द्वारा की गई थी। यह मंदिर भक्ति और आध्यात्मिक एकता का केंद्र है, जहाँ धार्मिक अनुष्ठान, सामुदायिक कार्यक्रम और सांस्कृतिक उत्सव आयोजित किए जाते हैं। अपनी शांतिपूर्ण वातावरण और पारंपरिक वास्तुकला के साथ, यह मंदिर श्रद्धालुओं के लिए आस्था और समर्पण का प्रतीक बना हुआ है।
               </p>
               <p className="text-lg mb-6">
-                Our mission is to foster spiritual growth, promote cultural understanding, and serve the community through various charitable initiatives. We welcome people of all backgrounds to join us in prayer and celebration.
+              हमारा मिशन आध्यात्मिक विकास को बढ़ावा देना, सांस्कृतिक समझ को प्रोत्साहित करना और विभिन्न धर्मार्थ पहलों के माध्यम से समुदाय की सेवा करना है। हम सभी पृष्ठभूमियों के लोगों का प्रार्थना और उत्सव में शामिल होने के लिए हार्दिक स्वागत करते हैं।
               </p>
               <p className="text-lg">
-                With a dedicated committee of volunteers and spiritual leaders, we organize regular worship services, cultural events, and community gatherings throughout the year.
+              समर्पित स्वयंसेवकों और आध्यात्मिक नेताओं की एक समिति के साथ, हम पूरे वर्ष नियमित पूजा सेवाओं, सांस्कृतिक कार्यक्रमों और सामुदायिक समारोहों का आयोजन करते हैं।
               </p>
             </div>
             <div className="rounded-lg overflow-hidden shadow-lg">
@@ -47,7 +47,7 @@ const About = () => {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/images/img3.jpg" 
+                  src="/images/im5.jpg" 
                   alt="Community center" 
                   className="w-full h-60 object-cover"
                 />
@@ -55,7 +55,7 @@ const About = () => {
               </div>
               <div className="rounded-lg overflow-hidden">
                 <img 
-                  src="/images/img4.jpg" 
+                  src="/images/im4.jpg" 
                   alt="Meditation garden" 
                   className="w-full h-60 object-cover"
                 />

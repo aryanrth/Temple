@@ -15,7 +15,7 @@ const templeEvents = [
     date: "October 6-15, 2024",
     time: "6:00 PM - 10:00 PM",
     location: "Main Temple Hall",
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be?auto=format&fit=crop&w=800&h=500"
+    image: "/images/ig2.jpg"
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const templeEvents = [
     date: "November 12, 2024",
     time: "5:00 PM - 9:00 PM",
     location: "Temple Grounds",
-    image: "https://images.unsplash.com/photo-1473177104440-ffee2f376098?auto=format&fit=crop&w=800&h=500"
+    image: "/images/ig3.jpg"
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const templeEvents = [
     date: "March 15, 2025",
     time: "10:00 AM - 2:00 PM",
     location: "Temple Garden Area",
-    image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e?auto=format&fit=crop&w=800&h=500"
+    image: "/images/ig4.jpg"
   },
   {
     id: 4,

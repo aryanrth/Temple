@@ -36,31 +36,22 @@ export const coreteam: CoreTeam[] = [
     name: "Mr.Ayush Rathore",
     role: "Working Meamber",
     responsibilities: ["Financial Management", "Donation Processing", "Budget Planning"],
-    photoUrl: "/images/img20.jpg",
+    photoUrl: "/images/im6.jpg",
     description: "Vikram manages the temple finances with transparency and integrity. He has implemented efficient systems for tracking donations and expenses.",
     phoneNumber: "+91 7434810051",
     // email: "vikram.singh@example.com"
   },
   {
     id: 4,
-    name: "Mr.Meet Rathore",
+    name: "Mr.Arun Rathore",
     role: "Working Member",
     responsibilities: ["Festival Planning", "Cultural Programs", "Youth Engagement"],
-    photoUrl: "/images/img27.jpg",
+    photoUrl: "/images/img5.jpg",
     description: "Ananya leads our cultural initiatives with passion and creativity. She has revitalized our festival celebrations and established several new cultural programs.",
-    phoneNumber: "+91 8225852040",
+    phoneNumber: "+91 8200604514",
     // email: "ananya.desai@example.com"
   },
-  {
-    id: 5,
-    name: "Mrs.Vishakha Rathore",
-    role: "Cleaning Head",
-    responsibilities: ["Building Maintenance", "Grounds Keeping", "Renovation Projects"],
-    photoUrl: "/images/img26.jpg",
-    description: "Suresh ensures our temple premises are beautiful and well-maintained. His dedication keeps our sacred space clean, functional, and welcoming for all visitors.",
-    phoneNumber: "+91 9557547541",
-    // email: "suresh.kumar@example.com"
-  },
+  
   {
     id: 6,
     name: "Mr.Keerti Rathore",
