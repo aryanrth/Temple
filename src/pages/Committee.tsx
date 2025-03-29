@@ -1,65 +1,78 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Phone, Home, User } from 'lucide-react';
 
-const TrusteeInfo = () => {
-  const location = useLocation();
+import { useState } from "react";
+import { committeeMembers } from "@/data/committeeMembers";
+import MemberCard from "@/components/MemberCard";
+import MemberDetailDialog from "@/components/MemberDetailDialog";
+import { useToast } from "@/components/ui/use-toast";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+const Teams = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const { toast } = useToast();
+
+  const handleMemberClick = (memberId: number) => {
+    const member = committeeMembers.find(m => m.id === memberId);
+    setSelectedMember(member);
+    setDialogOpen(true);
+    
+    // Optional toast notification
+    toast({
+      title: "Viewing member details",
+      description: `You are now viewing ${member?.name}'s profile.`,
+      duration: 3000,
+    });
+  };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-blue-200">
-      <div className="bg-white p-8 rounded-2xl shadow-xl max-w-2xl w-full mx-4 flex flex-col md:flex-row items-center md:items-start">
-        {/* Trustee Information Section */}
-        <div className="md:w-2/3 text-center md:text-left md:pr-6">
-          <h2 className="text-xl font-semibold text-blue-800 mb-4 flex items-center justify-center md:justify-start">
-            <User className="mr-2" />
-            Temple Trustee Information
-          </h2>
-          <h3 className="text-xl font-semibold text-blue-800">Mr. Ramdath Rathore</h3>
-          <p className="text-blue-600 mb-4">Head Trustee & Temple Committee Leader</p>
-          <p className="text-gray-700 mb-6">
-            Mr. Ramdath Rathore has been leading the temple trust with dedication and integrity
-            for over 15 years. Under his leadership, the temple has expanded its reach in
-            community service, cultural preservation, and spiritual guidance.
+    <div className="min-h-screen bg-gradient-to-b from-temple-ivory to-white">
+      {/* Navigation Header */}
+      <SiteHeader />
+      
+      {/* Hero Section */}
+      <div className="bg-temple-maroon text-white py-12 px-4 md:py-20">
+        <div className="container mx-auto text-center">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">Temple Committee Team</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-temple-ivory/90">
+            Meet the dedicated individuals who serve our temple community with devotion and commitment.
           </p>
-          <div className="flex items-center text-blue-700 mb-4">
-            <Phone className="w-5 h-5 mr-3" />
-            <a href="tel:+8755255660" className="hover:text-blue-900">
-              8755255660
-            </a>
-          </div>
-        </div>
-
-        {/* Trustee Image */}
-        <div className="md:w-1/3 flex justify-center">
-          <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-200">
-            <img 
-              src="/images/trustee.jpg" 
-              alt="Mr. Ramdath Rathore"
-              className="w-full h-full object-cover"
-            />
-          </div>
         </div>
       </div>
       
-      {/* Home Button */}
-      <div className="text-center mt-6">
-        <a 
-          href="/" 
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          <Home className="w-5 h-5 mr-2" />
-          Return to Temple Home
-        </a>
+      {/* Committee Members Grid */}
+      <div className="container mx-auto py-12 px-4">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-temple-maroon mb-2">
+            Temple Committe Team
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Click on a member's profile to learn more about their role, responsibilities, and contact information.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {committeeMembers.map((member) => (
+            <MemberCard 
+              key={member.id}
+              member={member}
+              onClick={() => handleMemberClick(member.id)}
+            />
+          ))}
+        </div>
       </div>
+      
+      {/* Footer */}
+      <SiteFooter />
+      
+      {/* Member Detail Dialog */}
+      <MemberDetailDialog 
+        member={selectedMember}
+        isOpen={dialogOpen}
+        onClose={() => setDialogOpen(false)}
+      />
     </div>
   );
 };
 
-export default TrusteeInfo;
+export default Teams;
